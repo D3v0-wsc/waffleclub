@@ -8,7 +8,7 @@ import {Timeline} from "../../../components/Timeline";
 import {MemberCard} from "../../../components/MemberCard";
 import {Footer} from "../../../components/Footer";
 import truck from "../../../public/banner.png";
-import table from "../../../public/table_1.png";
+import table from "../../../public/whipped_creamdao.png";
 import {Details} from "../../../components/Details";
 import AliceCarousel from "react-alice-carousel";
 import {readdirSync} from "fs";
