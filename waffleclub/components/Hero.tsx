@@ -37,7 +37,6 @@ export const Hero = ({artworks}: { artworks: string[] }) => {
       height: "100vh",
       minHeight: '1080px',
       backgroundColor: "#f5d8ad",
-      backgroundImage: "url('/flat-mountains.svg')",
       backgroundPosition: "bottom",
       backgroundSize: "cover",
       backgroundRepeat: "no-repeat",
@@ -52,8 +51,8 @@ export const Hero = ({artworks}: { artworks: string[] }) => {
       <div style={{
         paddingBottom: '250px',
       }}>
-        <h2>Mint date</h2>
-        <time> 12/05/2021 21:00 UTC</time>
+        <h2>Join the Waffle Social Club</h2>
+        <h3></h3>
       </div>
       <div style={{
         position: "absolute",
