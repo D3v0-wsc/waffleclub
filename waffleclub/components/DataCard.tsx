@@ -26,17 +26,17 @@ const StyledDataCard = styled.div`
 export const DataCard = ({label, value}: { label: string; value: string; }) => {
   const icon = useMemo(() => {
     switch (label) {
-      case 'Eggs':
+      case 'Waffles':
         return Eggs;
-      case 'Water':
+      case 'Available':
         return Water;
       case 'Milk':
         return Milk;
-      case 'Butter':
+      case 'Solana':
         return Butter;
-      case 'Flour':
+      case 'Mint Date':
         return Flour;
-      case 'Fresh Yeast':
+      case 'Unique Traits':
         return Yeast;
       default:
         return Chantilly;

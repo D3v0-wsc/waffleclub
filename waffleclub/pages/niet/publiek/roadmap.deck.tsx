@@ -18,7 +18,7 @@ const Roadmap = () => {
 
   const getPDFData = () => {
     // can be web URL
-    const url = "/sample.pdf";
+    const url = "/Litepaper_WSC-SQ.pdf";
     downloadPDFFromURL(url);
   };
 
@@ -56,15 +56,13 @@ const Roadmap = () => {
     console.log("File download started");
   };
 
-
-  /*
-    const progressFunction = async (event: { lengthComputable: any; loaded: number; total: number; }) => {
+/*
+  const progressFunction = async (event: { lengthComputable: any; loaded: number; total: number; }) => {
       if (event.lengthComputable) {
         const progress = Math.round((event.loaded / event.total) * 100) + "%";
         setprogressTxt(progress);
       }
-    };
-  */
+    }; */
 
   const downloadError = () => {
     console.log("Network Error!");
@@ -105,8 +103,10 @@ const Roadmap = () => {
   const fetchPageNo = async (pageNo: any, pdf: any, container: any) => {
     if (pageNo < pdf._pdfInfo.numPages) {
       pageNo += 1;
-      const page = await createContextForCanvas(pdf, container, pageNo);
-      fetchPageNo(page + "1", pdf, container);
+      console.log(pageNo);
+      createContextForCanvas(pdf, container, pageNo).then((page) => {
+        fetchPageNo(page, pdf, container);
+      });
     }
   };
 
@@ -233,8 +233,9 @@ const Roadmap = () => {
   };
 
   return (
-
-    <div ref={pageRenderRef}></div>
+    <div>
+      <div ref={pageRenderRef}></div>
+    </div>
   );
 };
 
