@@ -1,18 +1,24 @@
-import styled from "styled-components";
-import {useMemo} from "react";
-import {Socials} from "./Socials";
 import Image from "next/image";
-import logoBlack from "../public/logo-black.png";
+import {useMemo} from "react";
+import styled from "styled-components";
 import {YellowCream} from "../consts";
+import logoBlack from "../public/logo-black.png";
+import {Socials} from "./Socials";
 
 const StyledFooter = styled.footer`
   display: flex;
- // flex-direction: column;
-  justify-content: center;
+  // flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  padding: 6rem 2rem;
+  padding: 6rem 0;
   gap: 2rem;
   color: ${YellowCream};
+  max-width: 90vw;
+  margin: auto;
+
+  a {
+    color: ${YellowCream};
+  }
 
   img {
     width: 200px;
@@ -25,13 +31,12 @@ const StyledFooter = styled.footer`
 
   .socials {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    max-width: 900px;
-    width: 50vw;
+    width: 200px;
+    gap: 25px;
 
     a {
-      width: 25px;
+      width: 35px;
 
       svg {
         fill: ${YellowCream};
@@ -50,7 +55,10 @@ export const Footer = () => {
       width={200}
       height={200}
     />
-    <p>©WaffleSocialClub {year}. All Rights Reserved.</p>
+    <p>
+      ©WaffleSocialClub {year}. All Rights Reserved.<br/>
+      <a href="/niet/publiek/terms">Terms and conditions</a>
+    </p>
     <Socials/>
   </StyledFooter>;
 }
